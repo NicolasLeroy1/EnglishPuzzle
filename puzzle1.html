@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle 1 - World Rescue Quest</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #5b4ab9;
+      color: #ffffff;
+    }
+    header {
+      background-color: #4CAF50;
+      padding: 20px;
+      text-align: center;
+      font-size: 30px;
+      color: white;
+    }
+    .container {
+      background-color: #2e1c4b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 50px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .puzzle-text {
+      max-width: 800px;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .submit-button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .submit-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Puzzle 1 - World Rescue Quest
+  </header>
+  <div class="container">
+    <p class="puzzle-text">
+      As you set up camp near the ancient ruin, you notice a mysterious inscription on one of the walls. It appears to be a riddle, perhaps the key to unlocking the secrets of the ruin. The riddle reads:
+    </p>
+    <blockquote>
+      "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"
+    </blockquote>
+    <input type="text" id="answer" placeholder="Enter your answer here">
+    <button class="submit-button" onclick="checkAnswer()">Submit</button>
+  </div>
+  <script>
+    function checkAnswer() {
+      const userAnswer = document.getElementById("answer").value.toLowerCase().trim();
+      if (userAnswer === "echo") {
+        alert("Congratulations! You've solved the first puzzle. Proceed to the next challenge.");
+        window.location.href = "puzzle2.html";
+      } else {
+        alert("Incorrect answer. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
