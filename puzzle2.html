@@ -64,10 +64,12 @@
     <img src="treeruin.jpg" alt="Ancient Ruin" class="ruin-image">
     <p class="puzzle-text">
         You turn and see a tree which wasn't here earlier.
-        The face of your brother is graved in the wood and ask for something :
+        The face of your brother is graved in the wood.
+        You hear the mysterious voice again
     </p>
     <blockquote>
-      "I need your help , my thirst doesn't stop , give me the thing we share"
+       "I am as the man you called , i fell from the highest of place.
+        Yet one of my kind pass by every 77 years, what do you call her ?"
     </blockquote>
     <input type="text" id="answer" placeholder="Enter your answer here">
     <button class="submit-button" onclick="checkAnswer()">Submit</button>
@@ -75,9 +77,9 @@
   <script>
     function checkAnswer() {
       const userAnswer = document.getElementById("answer").value.toLowerCase().trim();
-      if (userAnswer === "julius caesar") {
+      if (userAnswer === "halley's comet") {
         alert("Indeed");
-        window.location.href = "puzzle2.html";
+        window.location.href = "puzzle3.html";
       } else {
         alert("I don't think so");
       }
