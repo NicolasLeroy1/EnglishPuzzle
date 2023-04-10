@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The ancient ruin 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #005c91d7;
+      color: #ffffff;
+    }
+    header {
+      background-color: #48bcffd7;
+      padding: 20px;
+      text-align: center;
+      font-size: 30px;
+      color: white;
+    }
+    .container {
+      background-color: #48bcffd7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 50px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .puzzle-text {
+      max-width: 800px;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .ruin-image {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    }
+    .submit-button {
+      background-color: #005c91d7;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .submit-button:hover {
+      background-color: #60c5ffd7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    The strange dream
+  </header>
+  <div class="container">
+    <img src="island.jpg" alt="Island" class="ruin-image">
+    <p class="puzzle-text">
+        You are quite knowledgeable, but are you smart ?
+    </p>
+    <blockquote>
+       "There are 3 strange tribes on my island , and each morning , the following events happen simultaneously :
+        Each person of the blue tribe becomes two of the red tribe.
+        Half of the red tribe becomes blue , and half becomes yellow.
+        A quarter of the yellow tribe disapears into thin air.
+
+        Yet each morning , each tribe is as numerous as the day before.
+        What is the population of each tribe ? "
+    </blockquote>
+      <label for="BlueTribe">Blue tribe:</label>
+      <input type="number" id="BlueTribe" required>
+      <label for="RedTribe">Red tribe:</label>
+      <input type="number" id="RedTribe" required>
+      <label for="YellowTribe">Yellow tribe:</label>
+      <input type="number" id="YellowTribe" required>
+      <button class="submit-button" onclick="checkNumbers()">Submit</button>
+  </div>
+  <script>
+    function checkNumbers() {
+            const number1 = document.getElementById("BlueTribe").value;
+            const number2 = document.getElementById("RedTribe").value;
+            const number3 = document.getElementById("YellowTribe").value;
+
+            if (number1 == 1 && number2 == 2 && number3 == 4) {
+              alert("Indeed");
+              window.location.href = "puzzle3.html";
+            } else {
+              alert("I don't think so");
+            }
+        }
+  </script>
+</body>
+</html>

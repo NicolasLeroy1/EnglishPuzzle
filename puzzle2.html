@@ -7,18 +7,18 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #2e1c4b;
+      background-color: #005c91d7;
       color: #ffffff;
     }
     header {
-      background-color: #5b4ab9;
+      background-color: #48bcffd7;
       padding: 20px;
       text-align: center;
       font-size: 30px;
       color: white;
     }
     .container {
-      background-color: #5b4ab9;
+      background-color: #48bcffd7;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -40,7 +40,7 @@
     margin-bottom: 20px;
     }
     .submit-button {
-      background-color: #2e1c4b;
+      background-color: #005c91d7;
       border: none;
       color: white;
       padding: 15px 32px;
@@ -52,38 +52,49 @@
       cursor: pointer;
     }
     .submit-button:hover {
-      background-color: #705fce;
+      background-color: #60c5ffd7;
     }
   </style>
 </head>
 <body>
   <header>
-    The ancient ruin
+    The strange dream
   </header>
   <div class="container">
-    <img src="treeruin.jpg" alt="Ancient Ruin" class="ruin-image">
+    <img src="island.jpg" alt="Ancient Ruin" class="ruin-image">
     <p class="puzzle-text">
-        You turn and see a tree which wasn't here earlier.
-        The face of your brother is graved in the wood.
-        You hear the mysterious voice again
+        You are quite knowledgeable, but are you smart ?
     </p>
     <blockquote>
-       "I am as the man you called , i fell from the highest of place.
-        Yet one of my kind pass by every 77 years, what do you call her ?"
+       "There are 3 strange tribes on my island , and each morning , the following events happen simultaneously :
+        Each person of the blue tribe becomes two of the red tribe.
+        Half of the red tribe becomes blue , and half becomes yellow.
+        A quarter of the yellow tribe disapears into thin air.
+
+        Yet each morning , each tribe is as numerous as the day before.
+        What is the population of each tribe ? "
     </blockquote>
-    <input type="text" id="answer" placeholder="Enter your answer here">
-    <button class="submit-button" onclick="checkAnswer()">Submit</button>
+      <label for="BlueTribe">Blue tribe:</label>
+      <input type="number" id="BlueTribe" required>
+      <label for="RedTribe">Red tribe:</label>
+      <input type="number" id="RedTribe" required>
+      <label for="YellowTribe">Yellow tribe:</label>
+      <input type="number" id="YellowTribe" required>
+      <button class="submit-button" onclick="checkNumbers()">Submit</button>
   </div>
   <script>
-    function checkAnswer() {
-      const userAnswer = document.getElementById("answer").value.toLowerCase().trim();
-      if (userAnswer === "halley's comet") {
-        alert("Indeed");
-        window.location.href = "puzzle3.html";
-      } else {
-        alert("I don't think so");
-      }
-    }
+    function checkNumbers() {
+            const number1 = document.getElementById("BlueTribe").value;
+            const number2 = document.getElementById("RedTribe").value;
+            const number3 = document.getElementById("YellowTribe").value;
+
+            if (number1 == 1 && number2 == 2 && number3 == 4) {
+              alert("Indeed");
+              window.location.href = "puzzle3.html";
+            } else {
+              alert("I don't think so");
+            }
+        }
   </script>
 </body>
 </html>

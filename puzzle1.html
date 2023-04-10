@@ -7,18 +7,18 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #2e1c4b;
+      background-color: #005c91d7;
       color: #ffffff;
     }
     header {
-      background-color: #5b4ab9;
+      background-color: #48bcffd7;
       padding: 20px;
       text-align: center;
       font-size: 30px;
       color: white;
     }
     .container {
-      background-color: #5b4ab9;
+      background-color: #48bcffd7;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -40,7 +40,7 @@
     margin-bottom: 20px;
     }
     .submit-button {
-      background-color: #2e1c4b;
+      background-color: #005c91d7;
       border: none;
       color: white;
       padding: 15px 32px;
@@ -52,23 +52,24 @@
       cursor: pointer;
     }
     .submit-button:hover {
-      background-color: #705fce;
+      background-color: #60c5ffd7;
     }
   </style>
 </head>
 <body>
   <header>
-    The ancient ruin
+    The strange dream
   </header>
   <div class="container">
     <img src="moon.jpg" alt="Moon" class="ruin-image">
     <p class="puzzle-text">
-        After some time, the arms of Morpheus embrace you.
-        You are standing in front of the strange fountain at the heart of the ruin, and a voice resounds behind you.
-        Despite your efforts, it is impossible for you to turn around.
+        After some time, the crackling stops.
+        You hear a breath , then a question :
     </p>
     <blockquote>
-      "Do you know the one who seized his destiny over rubicon ?"
+      "Three laws I proposed that govern the way,
+      Objects dance and fall, night and day.
+      Who am i ?"
     </blockquote>
     <input type="text" id="answer" placeholder="Enter your answer here">
     <button class="submit-button" onclick="checkAnswer()">Submit</button>
@@ -76,8 +77,8 @@
   <script>
     function checkAnswer() {
       const userAnswer = document.getElementById("answer").value.toLowerCase().trim();
-      if (userAnswer === "julius caesar") {
-        alert("Indeed, him who fell from the highest place striked by his son");
+      if (userAnswer === "isaac newton") {
+        alert("Indeed");
         window.location.href = "puzzle2.html";
       } else {
         alert("I don't think so");
