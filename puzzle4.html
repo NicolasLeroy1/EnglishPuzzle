@@ -62,16 +62,25 @@
     The strange dream
   </header>
   <div class="container">
-    <img src="oldman.jpg" alt="Old Man" class="ruin-image">
+    <img src="wolf.jpg" alt="Wolf" class="ruin-image">
     <p class="puzzle-text">
-        The door unlocks behind you , you walk out and see an old man on a chair:
-        "I welcome you in my nightmare as i can't see them anymore."
+        "You have strange dreams, friend, you should eat less proteine before sleep"
+        Says the old man as he lift his hand in the air.
+        "I shall summon another riddle before leting you go"
     </p>
     <blockquote>
-       "They came by thousands a hundred milions years ago.
-       They managed to bond with those who speak by dancing in the air.
-       A great scholar lost himself for 40 years in the abominable mystery of their diversity.
-       Who are they?"
+       "In the village of Moonshadow, a secret resides,
+       Werewolves roam, hiding in plain sight.
+       A potion brewed by a curious sage,
+       Reveals the truth, or so it's claimed.
+       
+       The potion turns blue when a werewolf's near,
+       But sometimes it's wrong, causing unfounded fear.
+       For true werewolves, it works 100%,
+       But for mere humans,false alarm at 9%.
+       
+       As one in a hundred  bears the hidden curse,
+       what is the chance to not be cursed if the potion turns blue ?
     </blockquote>
     <input type="text" id="answer" placeholder="Enter your answer here">
     <button class="submit-button" onclick="checkAnswer()">Submit</button>
@@ -79,9 +88,9 @@
   <script>
     function checkAnswer() {
       const userAnswer = document.getElementById("answer").value.toLowerCase().trim();
-      if (userAnswer === "flowers") {
-        alert("Indeed");
-        window.location.href = "puzzle4.html";
+      if (userAnswer === "90%") {
+        alert("Congratulations, i let you go");
+        window.location.href = "index.html";
       } else {
         alert("I don't think so");
       }
